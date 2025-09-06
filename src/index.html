@@ -21,6 +21,341 @@
     <link rel="stylesheet" href="./output.css" />
   </head>
   <body>
-    <h1 class="text-2xl bg-cardcolor_3">Hello Plant website</h1>
+    <!-- HEADER AREA START  -->
+    <header class="fixed top-0 left-0 w-full z-10 bg-first-color">
+      <nav class="flex justify-between items-center h-20 px-2 md:px-6 lg:px-10 xl:px-34">
+        <!-- logo here  -->
+        <a href="">
+          <h2 class="text-2xl capitalize font-bold text-white">green earth</h2>
+        </a>
+        <!-- menu links  -->
+        <div
+          id="menu"
+          class="absolute top-0 left-[-100%] bg-first-color w-full min-h-[80vh] px-5 duration-500 ease-out overflow-hidden z-20 md:static md:min-h-fit md:bg-transparent md:w-auto md:px-0"
+        >
+          <ul class="flex flex-col items-center gap-8 pt-20 md:flex-row md:pt-0">
+            <li>
+              <a href="#about" class="text-white hover:text-second-color ease-out duration-500 font-bold nav-link"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="#gallery" class="text-white hover:text-second-color ease-out duration-500 font-bold nav-link"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a href="#plant" class="text-white hover:text-second-color ease-out duration-500 font-bold nav-link"
+                >Plant a Tree</a
+              >
+            </li>
+          </ul>
+          <!-- close icon  -->
+          <div id="close-btn" class="text-2xl cursor-pointer absolute top-5 right-5 md:hidden">
+            <i class="fa-solid fa-xmark text-white"></i>
+          </div>
+        </div>
+
+        <!-- button area   -->
+        <button class="btn px-4 py-2 rounded-full bg-second-color text-first-color md:px-5 md:py-3">
+          Plant a Tree
+        </button>
+        <!-- hambargar button  -->
+        <div id="mobile-menu" class="text-2xl cursor-pointer text-white md:hidden">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+    <!-- HEADER AREA END -->
+    <main>
+      <!-- BANNER AREA START  -->
+      <section
+        class="relative bg-banner-color pt-40 pb-24 md:pt-48 md:pb-36 px-2 md:px-6 lg:px-10 xl:px-34 overflow-hidden"
+      >
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-title-color">Plant a Tree, Grow a Future</h1>
+          <p class="text-base text-text-color opacity-80 py-4 max-w-lg mx-auto">
+            Join our mission to plant 1 million trees and make the Earth greener for future generations.
+          </p>
+          <button class="btn px-4 py-2 rounded-full bg-second-color text-first-color md:px-5 md:py-3">
+            Get Involved
+          </button>
+        </div>
+        <img
+          src="./assets/hero-leaf1.png"
+          alt=""
+          class="hidden w-40 md:w-72 lg:w-90 xl:w-1/4 md:block absolute left-0 bottom-0 -rotate-10"
+        />
+        <img
+          src="./assets/hero-leaf2.png"
+          alt=""
+          class="hidden w-40 md:w-72 lg:w-90 xl:w-1/4 md:block absolute right-0 bottom-0 rotate-10"
+        />
+      </section>
+      <!-- BANNER AREA END  -->
+      <!-- TREE CONTAINER SECTION START  -->
+      <section class="py-10 px-2 md:py-16 lg:py-20 md:px-6 lg:px-10 xl:px-34">
+        <div class="grid grid-cols-12 gap-2">
+          <aside class="col-span-12 lg:col-span-2">
+            <h2 class="text-xl text-center mb-2 text-black font-semibold">Categories</h2>
+            <ul class="flex gap-1 text-center flex-wrap">
+              <li
+                class="btn flex place-items-center cursor-pointer text-base text-title-color bg-transparent ease-in-out duration-500 hover:bg-[#15803D] hover:text-white justify-center lg:w-full lg:justify-start"
+              >
+                All Trees
+              </li>
+              <li
+                class="btn flex place-items-center cursor-pointer text-base text-title-color bg-transparent ease-in-out duration-500 hover:bg-[#15803D] hover:text-white justify-center lg:w-full lg:justify-start"
+              >
+                Fruit Trees
+              </li>
+              <li
+                class="btn flex place-items-center cursor-pointer text-base text-title-color bg-transparent ease-in-out duration-500 hover:bg-[#15803D] hover:text-white justify-center lg:w-full lg:justify-start"
+              >
+                Flowering Trees
+              </li>
+              <li
+                class="btn flex place-items-center cursor-pointer text-base text-title-color bg-transparent ease-in-out duration-500 hover:bg-[#15803D] hover:text-white justify-center lg:w-full lg:justify-start"
+              >
+                Shade Trees
+              </li>
+              <li
+                class="btn flex place-items-center cursor-pointer text-base text-title-color bg-transparent ease-in-out duration-500 hover:bg-[#15803D] hover:text-white justify-center lg:w-full lg:justify-start"
+              >
+                Medicinal Trees
+              </li>
+              <li
+                class="btn flex place-items-center cursor-pointer text-base text-title-color bg-transparent ease-in-out duration-500 hover:bg-[#15803D] hover:text-white justify-center lg:w-full lg:justify-start"
+              >
+                Medicinal Trees
+              </li>
+              <li
+                class="btn flex place-items-center cursor-pointer text-base text-title-color bg-transparent ease-in-out duration-500 hover:bg-[#15803D] hover:text-white justify-center lg:w-full lg:justify-start"
+              >
+                Medicinal Trees
+              </li>
+              <li
+                class="btn flex place-items-center cursor-pointer text-base text-title-color bg-transparent ease-in-out duration-500 hover:bg-[#15803D] hover:text-white justify-center lg:w-full lg:justify-start"
+              >
+                Medicinal Trees
+              </li>
+            </ul>
+          </aside>
+
+          <article class="col-span-8 lg:col-span-8">
+            <div id="tree-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+              <!-- tree card div  -->
+              <div class="p-4 bg-white rounded-lg">
+                <img src="./assets/project_03.jpg" alt="" class="rounded-lg" />
+                <h3 class="text-xl text-title-color font-semibold py-2">Mango Tree</h3>
+                <p class="text-base text-text-color opacity-80">
+                  A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
+                </p>
+                <div class="flex items-center justify-between py-4">
+                  <button class="btn bg-[#DCFCE7] text-xs text-first-color capitalize rounded-full">Fruit Tree</button>
+                  <h3 class="text-lg font-semibold text-title-color">৳ <span>500</span></h3>
+                </div>
+                <button class="btn w-full rounded-full bg-first-color text-white">Add to Cart</button>
+              </div>
+
+              <!-- tree card div  -->
+              <div class="p-4 bg-white rounded-lg">
+                <img src="./assets/project_03.jpg" alt="" class="rounded-lg" />
+                <h3 class="text-xl text-title-color font-semibold py-2">Mango Tree</h3>
+                <p class="text-base text-text-color opacity-80">
+                  A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
+                </p>
+                <div class="flex items-center justify-between py-4">
+                  <button class="btn bg-[#DCFCE7] text-xs text-first-color capitalize rounded-full">Fruit Tree</button>
+                  <h3 class="text-lg font-semibold text-title-color">৳ <span>500</span></h3>
+                </div>
+                <button class="btn w-full rounded-full bg-first-color text-white">Add to Cart</button>
+              </div>
+
+              <!-- tree card div  -->
+              <div class="p-4 bg-white rounded-lg">
+                <img src="./assets/project_03.jpg" alt="" class="rounded-lg" />
+                <h3 class="text-xl text-title-color font-semibold py-2">Mango Tree</h3>
+                <p class="text-base text-text-color opacity-80">
+                  A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
+                </p>
+                <div class="flex items-center justify-between py-4">
+                  <button class="btn bg-[#DCFCE7] text-xs text-first-color capitalize rounded-full">Fruit Tree</button>
+                  <h3 class="text-lg font-semibold text-title-color">৳ <span>500</span></h3>
+                </div>
+                <button class="btn w-full rounded-full bg-first-color text-white">Add to Cart</button>
+              </div>
+
+              <!-- tree card div  -->
+              <div class="p-4 bg-white rounded-lg">
+                <img src="./assets/project_03.jpg" alt="" class="rounded-lg" />
+                <h3 class="text-xl text-title-color font-semibold py-2">Mango Tree</h3>
+                <p class="text-base text-text-color opacity-80">
+                  A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
+                </p>
+                <div class="flex items-center justify-between py-4">
+                  <button class="btn bg-[#DCFCE7] text-xs text-first-color capitalize rounded-full">Fruit Tree</button>
+                  <h3 class="text-lg font-semibold text-title-color">৳ <span>500</span></h3>
+                </div>
+                <button class="btn w-full rounded-full bg-first-color text-white">Add to Cart</button>
+              </div>
+
+              <!-- tree card div  -->
+              <div class="p-4 bg-white rounded-lg">
+                <img src="./assets/project_03.jpg" alt="" class="rounded-lg" />
+                <h3 class="text-xl text-title-color font-semibold py-2">Mango Tree</h3>
+                <p class="text-base text-text-color opacity-80">
+                  A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
+                </p>
+                <div class="flex items-center justify-between py-4">
+                  <button class="btn bg-[#DCFCE7] text-xs text-first-color capitalize rounded-full">Fruit Tree</button>
+                  <h3 class="text-lg font-semibold text-title-color">৳ <span>500</span></h3>
+                </div>
+                <button class="btn w-full rounded-full bg-first-color text-white">Add to Cart</button>
+              </div>
+
+              <!-- tree card div  -->
+              <div class="p-4 bg-white rounded-lg">
+                <img src="./assets/project_03.jpg" alt="" class="rounded-lg" />
+                <h3 class="text-xl text-title-color font-semibold py-2">Mango Tree</h3>
+                <p class="text-base text-text-color opacity-80">
+                  A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
+                </p>
+                <div class="flex items-center justify-between py-4">
+                  <button class="btn bg-[#DCFCE7] text-xs text-first-color capitalize rounded-full">Fruit Tree</button>
+                  <h3 class="text-lg font-semibold text-title-color">৳ <span>500</span></h3>
+                </div>
+                <button class="btn w-full rounded-full bg-first-color text-white">Add to Cart</button>
+              </div>
+
+              <!-- tree card div  -->
+              <div class="p-4 bg-white rounded-lg">
+                <img src="./assets/project_03.jpg" alt="" class="rounded-lg" />
+                <h3 class="text-xl text-title-color font-semibold py-2">Mango Tree</h3>
+                <p class="text-base text-text-color opacity-80">
+                  A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
+                </p>
+                <div class="flex items-center justify-between py-4">
+                  <button class="btn bg-[#DCFCE7] text-xs text-first-color capitalize rounded-full">Fruit Tree</button>
+                  <h3 class="text-lg font-semibold text-title-color">৳ <span>500</span></h3>
+                </div>
+                <button class="btn w-full rounded-full bg-first-color text-white">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <aside class="bg-white col-span-4 lg:col-span-2 p-1 rounded-lg">
+            <h3 class="text-lg font-semibold text-black text-center">Your Cart</h3>
+            <div class="flex items-center justify-between bg-bg-color1 p-1 rounded-lg mb-2">
+              <div>
+                <h3 class="text-xs font-bold text-title-color">Mango Tree</h3>
+                <p class="py-1">৳ <span>500</span> x 1</p>
+              </div>
+              <div>
+                <i class="fa-solid fa-xmark text-black cursor-pointer"></i>
+              </div>
+            </div>
+            <div class="flex items-center justify-between bg-bg-color1 p-1 rounded-lg mb-2">
+              <div>
+                <h3 class="text-xs font-bold text-title-color">Mango Tree</h3>
+                <p class="py-1">৳ <span>500</span> x 1</p>
+              </div>
+              <div>
+                <i class="fa-solid fa-xmark text-black cursor-pointer"></i>
+              </div>
+            </div>
+            <div class="flex items-center justify-between bg-bg-color1 p-1 rounded-lg mb-2">
+              <div>
+                <h3 class="text-xs font-bold text-title-color">Mango Tree</h3>
+                <p class="py-1">৳ <span>500</span> x 1</p>
+              </div>
+              <div>
+                <i class="fa-solid fa-xmark text-black cursor-pointer"></i>
+              </div>
+            </div>
+
+            <!-- total price  -->
+            <div class="flex items-center justify-between border-t-2 border-t-gray-400">
+              <p class="capitalize text-base text-title-color">Total:</p>
+              <p class="capitalize text-base text-title-color">৳ <span>1000</span></p>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <!-- TREE CONTAINER SECTION END  -->
+      <!-- ABOUT SECTION END  -->
+      <section class="max-w-[1050px] mx-auto py-10 px-2 md:py-16 lg:py-20">
+        <h2 class="text-center text-3xl text-title-color font-semibold">About the Campaign</h2>
+        <div class="flex flex-col gap-4 py-4 items-center justify-center md:flex-row">
+          <img src="./assets/about.png" alt="" class="w-full md:w-1/2" />
+          <div class="w-full md:w-1/2">
+            <p class="text-base text-title-color opacity-80">
+              Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start,
+              we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create
+              habitats for wildlife, and combat global warming.
+            </p>
+            <ul class="list-disc list-inside pt-5">
+              <li class="text-base text-title-color opacity-80 ml-4">Restoration of natural habitats</li>
+              <li class="text-base text-title-color opacity-80 ml-4">Improvement of air quality</li>
+              <li class="text-base text-title-color opacity-80 ml-4">Support for local communities</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- ABOUT SECTION END  -->
+
+      <!-- IMPACE SECTION AREA START  -->
+      <section class="py-10 px-2 md:py-16 lg:py-20 md:px-6 lg:px-10 xl:px-34 bg-banner-color">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-12">
+          <div class="bg-white flex flex-col items-center justify-center py-10 rounded-lg">
+            <h2 class="text-3xl font-semibold text-first-color mb-2">500K+</h2>
+            <p class="text-base text-title-color opacity-80">Trees Planted</p>
+          </div>
+          <div class="bg-white flex flex-col items-center justify-center py-10 rounded-lg">
+            <h2 class="text-3xl font-semibold text-first-color mb-2">500K+</h2>
+            <p class="text-base text-title-color opacity-80">Trees Planted</p>
+          </div>
+          <div class="bg-white flex flex-col items-center justify-center py-10 rounded-lg">
+            <h2 class="text-3xl font-semibold text-first-color mb-2">500K+</h2>
+            <p class="text-base text-title-color opacity-80">Trees Planted</p>
+          </div>
+        </div>
+      </section>
+      <!-- IMPACE SECTION AREA END  -->
+      <!-- NEWSLETTER SECTION START  -->
+      <section class="py-10 px-2 md:py-16 lg:py-20 md:px-6 lg:px-10 xl:px-34 bg-first-color1">
+        <h2 class="text-center text-3xl text-white font-semibold">Plant a Tree Today</h2>
+        <div class="max-w-[635px] mx-auto flex items-center justify-center mt-8">
+          <div class="p-8 bg-first-color shadow-[0_4px_22px_rgba(0,0,0,0.6)] rounded-lg">
+            <input
+              type="text"
+              placeholder="Your Name"
+              class="input w-full focus:outline-none h-[48px] mb-3 p-2 placeholder:text-title-color placeholder:opacity-50 placeholder:text-base"
+            />
+            <input
+              type="email"
+              placeholder="Your email address"
+              class="input w-full focus:outline-none h-[48px] mb-3 p-2 placeholder:text-title-color placeholder:opacity-50 placeholder:text-base"
+            />
+            <select
+              class="select select-md w-full input focus:outline-none h-[48px] mb-3 p-2 placeholder:text-title-color placeholder:opacity-50 placeholder:text-base"
+            >
+              <option disabled selected>Number of Trees</option>
+              <option>Number of Trees</option>
+              <option>Medium Orange</option>
+              <option>Medium Tomato</option>
+            </select>
+            <button class="btn w-full rounded-full bg-second-color text-first-color border-0 py-3">Donate Now</button>
+          </div>
+        </div>
+      </section>
+      <!-- NEWSLETTER SECTION END  -->
+    </main>
+    <!-- FOOTER AREA START  -->
+    <footer class="bg-first-color2 flex justify-center items-center py-10">
+      <p class="text-base text-white">© 2025 Green Earth. All Rights Reserved.</p>
+    </footer>
+    <!-- FOOTER AREA END  -->
+    <script src="./main.js"></script>
   </body>
 </html>
